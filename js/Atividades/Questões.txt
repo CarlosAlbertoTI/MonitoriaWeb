@@ -1,0 +1,20 @@
+Modulo-Q1 Quais os tipos de declaração de variável(var, let, const) sofrem do hoisting?
+    O JavaScript leva ao topo as variáveis declaradas com let e const do es6, e a diferença é como elas são inicializadas.
+Variáveis que são declaradas com let ou const não são inicializadas no incio da execução, embora variáveis declaradas com var são inicializadas com o valor undefined.
+
+Modulo-Q2 Os tipos primitivos number e string são passados por valor ou por referencia? E os tipos array e object?
+    Tipo primitívos como numbers, string, boolean, undefined e null alem de serem imutaveis, eles támbem são passador como valor, já objetos são passados por referência, como o Array no javascript é um objeto, ele támbem é passado por referência.
+  
+[ModuloI-Q8] - Indique uma vantagem ao utilizar o Immediately invoked function expression (IIFE).
+    Previne o acesso externo às variáveis declaradas na IIFE, bem como evita que estas variáveis locais poluam o escopo.
+
+[ModuloI-Q10] - Quais as vantagens da arrow function?
+    São menos verbosas do que as funções tradicionais. Seu valor de this é definido à partir das funções onde foram definidas. Ou seja, não é mais necessário fazer bind() ou armazenar o estado em that = this;
+
+[ModuloI-Q14] - Na seguinte constante, é possível manipular o atributo ‘nome‘? Por quê? 
+    Sim, pois ele apenas não permite que você mude o tipo de dado, no caso um objeto. Caso tenta-se mudar o valor de a para int, retornaria um erro.
+
+[ModuloI-Q15] - Quais as vantagens de um objeto JSON?
+-Sintaxe simples, de fácil aprendizado e implementação;
+-Tamanho do arquivo bem menor em relação a outras “linguagens intermediárias”, tais como XML;
+-Facilidade de desenvolvimento e alto desempenho nas aplicações que o utilizam.
