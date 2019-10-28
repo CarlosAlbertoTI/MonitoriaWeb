@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modulo II Q3</title>
+    <style>
+        /*  */
+        
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .content-menus {
+            width: 60%;
+            height: 16em;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        nav>ul {
+            list-style: none;
+        }
+        /* DISPLAY:FLEX */
+        
+        nav:first-child {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+            height: 3em;
+            background-color: red;
+        }
+        
+        nav .menu1 {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 10;
+            height: 3em;
+        }
+        
+        nav .menu1 li {
+            display: flex;
+            flex-flow: row;
+            flex-basis: 80px;
+            height: 100%;
+            line-height: 3em;
+        }
+        
+        nav .menu1 li a {
+            display: block;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+        }
+        
+        nav .menu1 li:hover {
+            background-color: #A85959;
+        }
+        /* DISPLAY:INLINE-BLOCK */
+        
+        nav:nth-child(2) {
+            margin-top: 3em;
+            background-color: red;
+            height: 3em;
+        }
+        
+        nav>.logo2 {
+            float: left;
+            line-height: 3em;
+        }
+        
+        nav .menu2 {
+            float: right;
+        }
+        
+        nav .menu2 li {
+            display: inline-block;
+            width: 75px;
+            line-height: 3em;
+        }
+        
+        nav .menu2 li a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        nav .menu2 li:hover {
+            background-color: #A85959;
+        }
+        /* FLOAT */
+        
+        nav:nth-child(3) {
+            margin-top: 3em;
+            height: 3em;
+            background-color: red;
+        }
+        
+        nav:nth-child(3) .logo3 {
+            float: left;
+            line-height: 3em;
+        }
+        
+        nav:nth-child(3) .menu3,
+        nav:nth-child(3) .menu3 li {
+            float: right;
+        }
+        
+        nav:nth-child(3) .menu3 li {
+            width: 80px;
+            line-height: 3em;
+            height: 200%;
+        }
+        
+        nav:nth-child(3) .menu3 li:hover {
+            background-color: #A85959;
+        }
+        
+        nav:nth-child(3) .menu3 li a {
+            display: block;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-menus">
+        <nav>
+            <div class="logo">
+                <p>Logo</p>
+            </div>
+            <ul class="menu1">
+                <li>
+                    <a href="#">Item 1</a>
+                </li>
+                <li>
+                    <a href="#">Item 2</a>
+                </li>
+                <li>
+                    <a href="#">Item 3</a>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <div class="logo2">
+                <p>Logo</p>
+            </div>
+            <ul class="menu2">
+                <li>
+                    <a href="#">Item 1</a>
+                </li>
+                <li>
+                    <a href="#">Item 2</a>
+                </li>
+                <li>
+                    <a href="#">Item 3</a>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <div class="logo3">
+                <p>Logo</p>
+            </div>
+            <ul class="menu3">
+                <li>
+                    <a href="#">Item 1</a>
+                </li>
+                <li>
+                    <a href="#">Item 2</a>
+                </li>
+                <li>
+                    <a href="#">Item 3</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>

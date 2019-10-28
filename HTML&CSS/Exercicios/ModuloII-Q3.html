@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animação</title>
+    <style>
+        .animacao {
+            animation: spin 10s linear infinite;
+            width: 4vw;
+            height: 7vh;
+            background-color: black;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotateZ(0deg);
+            }
+            50% {
+                transform: rotateZ(180deg);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animacao">
+
+    </div>
+</body>
+
+</html>

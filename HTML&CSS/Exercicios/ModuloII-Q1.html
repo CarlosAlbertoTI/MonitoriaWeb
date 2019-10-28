@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modulo II Q1</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .size {
+            height: 30vh;
+            width: 15vw;
+        }
+        
+        .size-2 {
+            width: 8vw;
+            height: 4vh;
+            text-align: center;
+        }
+        
+        .content {
+            background-color: #ffff00;
+            position: relative;
+        }
+        
+        .content>.testeRelative {
+            background-color: red;
+            /* No caso do position tipo relative ele fica relativo ao elemento pai em que o elemento se encontra, 
+            no caso do elemento .content, apenas pq ele a classe .content támbem possui position diferente do padrão */
+            /* Abilitando position:relative, podemos usar as propriedades {top, bottom, left, right} */
+            position: relative;
+            float: right;
+            top: 5em;
+            right: 4em;
+        }
+        
+        .content-2 {
+            background-color: #00ffff;
+        }
+        
+        .content-2>.testeAbsolute {
+            background-color: #eDE0BB;
+            /* No caso da classe .testeAbsolute, ele tem como elemento pai o proprio elemento body, pois a classe .content-2 esta com a propriedade 
+            position default */
+            /* Abilitando o position:absolute e colocando a propriedade top: 0, o elemento da classe .testeAbsolute vai para o topo da pagina */
+            position: absolute;
+            top: 0;
+        }
+        
+        .content-3 {
+            background-color: #CCDBDC;
+            padding-bottom: 200px;
+        }
+        
+        .content-3>.testeFixed {
+            background-color: #004549;
+            /* No caso da classe .testeFixed, sua principal caracteristica e ele não sair do local onde foi posicionado caso a pagina html seja muito grande, no caso coloquei um padding na classe .content-3 para exemplificar */
+            /* Seu elemento pai sempre vai ser o elemento Body */
+            position: fixed;
+            right: 0;
+        }
+        
+        .content-4 {
+            background-color: #FF3700;
+            position: absolute;
+            top: 7em;
+            right: 0;
+        }
+        
+        .content-4>.testeSticky {
+            background-color: #668CFF;
+            /* No caso da classe .testeSticky, ele tem a caracteristica parecida com position:Fixed, no entando ele não fica preso totalmente ao teto, para isso acontecer,a pagina precisa ter scroll e quando o elemento com a propriedade position:Sticky chegar ao topo, ele vai se comportar como um Fixed */
+            position: sticky;
+            top: 7em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content size">
+        <div class="testeRelative size-2">
+            Relative
+        </div>
+    </div>
+    <div class="content-2 size">
+        <div class="testeAbsolute size-2">
+            Abosolute
+        </div>
+    </div>
+    <div class="content-3 size">
+        <div class="testeFixed size-2">
+            Fixed
+        </div>
+    </div>
+    <div class="content-4 size">
+        <div class="testeSticky size-2">
+            Sticky
+        </div>
+    </div>
+</body>
+
+</html>
