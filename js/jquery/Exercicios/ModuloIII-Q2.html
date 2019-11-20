@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ModuloIII-Q2</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>
+        const carros = [{
+            nome: 'Cronos',
+            ano: 2020,
+            valor: 54990
+        }, {
+            nome: 'Toro',
+            ano: 2020,
+            valor: 76900
+        }, {
+            nome: 'Siena',
+            ano: 2020,
+            valor: 37794
+        }]
+
+
+        let tabela = $('<table>')
+        $(tabela).append("<tr>")
+        $(tabela).children($("<tr>").first()).append("<td>Nome</td>").append("<td>Ano</td>").append("<td>Valor</td>")
+        $(tabela).children($("<tr>").first()).css('padding', '0.5em').css('text-align', 'center')
+
+        let dados = carros.map((e) => {
+            const nome = $('<td>').append(e.nome)
+            const ano = $('<td>').append(e.ano)
+            const valor = $('<td>').append(e.valor)
+            const final = $('<tr>').append(nome).append(ano).append(valor)
+            final.children($("<td>")).each((e, elemento) => {
+                $(elemento).css('border', '1px solid black').css('padding', '0.5em').css('background-color', 'green')
+                if (e % 3 != 0)
+                    $(elemento).css('background-color', 'grey')
+            })
+            return final
+        })
+        tabela.append(dados)
+        $('body').append(tabela)
+    </script>
+</body>
+
+</html>

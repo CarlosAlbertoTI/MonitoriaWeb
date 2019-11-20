@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ModuloIII-Q3</title>
+</head>
+
+<body>
+    <p>Toda vez que você apertar o botão, um item da lista ira desaparecer</p>
+    <ul>
+        <li>Nome: Caio Matheus Damateus</li>
+        <li>Idade: 12</li>
+
+    </ul>
+    <button>Clique aqui</button>
+    <p></p>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>
+        $('button').addClass('desaparecer')
+        $('.desaparecer').click(function() {
+            $("li").hide(3000)
+            $("p").first().hide()
+            $("p").last().html('Voce fez a lista desaparecer, para fazer ela aparecer novamente, clique duas vezes no butão')
+        })
+
+        $('.desaparecer').dblclick(() => {
+            $("p").show(3000)
+            $("li").show(3000)
+            $("p").last().html('').hide()
+        })
+    </script>
+</body>
+
+</html>

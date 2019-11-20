@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ModuloIII-Q5</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        
+        body form {
+            height: 120px;
+            flex-basis: 30em;
+            font-size: 1.2em;
+            border: 1px solid black;
+        }
+        
+        form #Name,
+        form #lastName {
+            width: 33%;
+            display: inline-block;
+        }
+        
+        form label:nth-child(1),
+        form label:last-of-type {
+            margin-left: 0.3em;
+        }
+        
+        form #Name {
+            margin-bottom: 1em;
+        }
+        
+        form #email {
+            width: 87%;
+        }
+        
+        button {
+            margin-left: 0.3em;
+            margin-top: 1.2em;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="#">
+        <label for="Name">Nome</label>
+        <input type="text" id="Name">
+        <label for="lastName">Sobrenome</label>
+        <input type="text" id="lastName">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email">
+        <br>
+        <button>Send</button>
+    </form>
+
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+
+
+    </ul>
+
+    <script src="../js/jquery.js"></script>
+    <script>
+        $('button').click(() => {
+            let name = $('#Name').val()
+            let sobrenome = $("#lastName").val()
+            let email = $('#email').val()
+
+            alert(`Name: ${name} \n Sobrenome: ${sobrenome} \n Email: ${email}`)
+        })
+
+        $("li").eq(-3).css("background-color", "red");
+    </script>
+</body>
+
+</html

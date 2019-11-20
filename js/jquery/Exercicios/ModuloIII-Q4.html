@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ModuloIII-Q4</title>
+    <style>
+        div {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script> -->
+    <script src="../js/jquery.js"></script>
+    <script>
+        $('div').css('margin-top', `${($(window).height() / 2.0)-100}px`)
+
+        function expandir() {
+            $('div').css('height', '300px')
+            $('div').css('width', '300px')
+            $('div').css('transform', 'rotate(30deg)')
+
+            $('div').append('<p>')
+            $('div p ').html('Hello There!')
+            $('div p').css('text-align', 'center')
+            $('div p').css('padding-top', '145px')
+
+            $('body').css('background-color', 'grey')
+        }
+
+        function contrair() {
+            $('body').css('background-color', 'white')
+
+            $('div').css('height', '100px')
+            $('div').css('width', '100px')
+            $('div').html('')
+            $('div').css('transform', 'rotate(0deg)')
+        }
+
+        function mover() {
+            $('div').css('transform', 'rotate(0deg)')
+            $('div').toggle(500).toggle(500)
+            $('div').fadeToggle(500).fadeToggle(500)
+
+        }
+
+        $('div').mouseenter(expandir)
+        $('div').mouseleave(contrair)
+        $('div').click(mover)
+    </script>
+</body>
+
+</html>
